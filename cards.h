@@ -77,7 +77,7 @@ class Player {
       Player(int m);
 
       // You decide what functions you'll need...
-
+      int get_money() const;
    private:
       int money;
       // You decide what extra fields (if any) you'll need...
