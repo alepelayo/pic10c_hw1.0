@@ -83,4 +83,7 @@ class Player {
       // You decide what extra fields (if any) you'll need...
 };
 
+double ranktopoints(Card card);
+void display(Card card);
+
 #endif

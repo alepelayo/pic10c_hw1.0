@@ -15,13 +15,19 @@ int main () {
 
 	Player player1 = Player(STARTING_BALANCE);
 
-	if (player1.get_money() != 0) {
+	//if (player1.get_money() != 0) {
 		int bet;
 		cout << "You have $" << player1.get_money() << ". Enter bet: ";
 		cin >> bet;
 		cout << endl;
+		if(bet > STARTING_BALANCE) {
+			cout << "Your bet exceeds your starting balance. Please lower your bet: ";
+			cin >> bet;
+		}
+
 		cout << "Your cards: " << endl;
-		cout << setw(8) << card1.get_spanish_rank() << " de " << card1.get_spanish_suit(); 
-	}
+		display(card1);
+		cout << "Your total is " << ranktopoints(card1) << ". Do you want another card (y/n)?";
+	//}
 	return 0;
 }

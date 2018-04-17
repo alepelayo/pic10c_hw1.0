@@ -203,3 +203,18 @@ Player::Player(int m) {
 int::Player get_money() const {
    return money;
 }
+
+double ranktopoints(Card card) {
+   if(card.get_rank() > 7) {
+      points = 0.5;
+      return points;
+   }
+   else {
+      return card.get_rank();
+   }
+}
+
+void display(Card card1) {
+   cout << setw(8) << card1.get_spanish_rank() << " de " << card1.get_spanish_suit();
+   cout << setw(8) << right << "(" << card1.get_english_rank() << " of " << card1.get_english_suit() << ")." << endl;
+}
