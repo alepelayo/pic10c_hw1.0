@@ -209,6 +209,7 @@ Player class
 // Implemente the member functions of the Player class here.
 
 
+
 double Hand::get_points() {
 	points = 0;
 	for (size_t i = 0; i < hand.size(); ++i) {

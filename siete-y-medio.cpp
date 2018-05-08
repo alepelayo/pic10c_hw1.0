@@ -1,7 +1,6 @@
 #include <iostream>
 #include "cards.h"
 #include <string>
-#include <iomanip>
 #include <ctime>
 #include <cstdlib>
 #include <vector>
@@ -24,51 +23,48 @@ int main() {
 	cout << "You have $" << player1.get_money() << ". Enter bet: ";
 	cin >> bet;
 	if (bet > STARTING_BALANCE) {
-		cout << "Your bet exceeds your starting balance. Please lower your bet: ";
+		std::cout << "Your bet exceeds your starting balance. Please lower your bet: ";
 		cin >> bet;
 	}
-	////	cout << endl;
 
 	player_uno.add_card();
 
 	cout << "Your cards: " << endl;
 	player_uno.display();
 
-	cout << "Your total is " << player_uno.get_points() << ". Do you want another card (y/n)? ";
-	cin >> decision;
+	do {
+		std::cout << "Your total is " << player_uno.get_points() << ". Do you want another card (y/n)? ";
+		cin >> decision;
 
-	if (decision == 'y') { //player1 plays all cards before AI
+		if (decision == 'y') { //player1 plays all cards before AI
 
-		cout << "New card: " << endl;
+			cout << "New card: " << endl;
 
-		player_uno.add_card();
+			player_uno.add_card();
 
 
-		cout << "Your cards: " << endl;
-		player_uno.display();
+			cout << "Your cards: " << endl;
+			player_uno.display();
 
-		cout << player_uno.get_points() << endl;
+			cout << player_uno.get_points() << endl;
+		}
 
-	}
+		if (decision == 'n') {
 
-	if (decision == 'n') {
+			cout << "Dealer's cards: " << endl;
+			dealer.add_card();
 
-		cout << "Dealer's cards: " << endl;
-		cout << dealer.add_card() << endl;
+			dealer.display();
 
-		dealer.display();
+			cout << dealer.get_points() << endl;
+		}
 
-		cout << dealer.get_points() << endl;
-
-		//while the dealer's hand does not exceed 7 points, they will draw another card
-
-	}
-
-	////}
-
+	} while (dealer.get_points() < 6);
+	//while the dealer's hand does not exceed 7 points, they will draw another card
 
 	cin.get();
 	cin.get();
-
 	return 0;
 }
+
+
