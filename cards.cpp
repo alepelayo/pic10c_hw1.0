@@ -209,17 +209,6 @@ Player class
 // Implemente the member functions of the Player class here.
 
 
-//double Hand::ranktopoints() {
-//	Card carta; //this is a different card from the add_card member function
-//	if (carta.get_rank() > 7) {
-//		double points = 0.5;
-//		return points;
-//	}
-//	else {
-//		return carta.get_rank();
-//	}
-//}
-
 double Hand::get_points() {
 	points = 0;
 	for (size_t i = 0; i < hand.size(); ++i) {
