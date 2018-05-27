@@ -1,9 +1,3 @@
-/* *************************************
-Ricardo Salazar, February 26, 2015
-
-Interface of a simple Card class
-************************************* */
-
 #include <string>
 #include <vector>
 #include <fstream>
@@ -59,7 +53,6 @@ private:
 	rank_t rank;
 };
 
-
 class Hand {
 public:
 	Hand();	// A vector of Cards
@@ -68,8 +61,8 @@ public:
 			// You decide what fields you'll need...
 			//double ranktopoints(); //gets points from another random card
 
-	void add_card(); //gets another random card
-	void display(); //displays the random card specified
+	void add_card(Card carta); //gets another random card
+	void displayAll(); //displays the random card specified
 	double get_points();
 
 private:
@@ -95,7 +88,7 @@ private:
 	// You decide what extra fields (if any) you'll need...
 };
 
-
+void display(Card carta);
 
 
 #endif
