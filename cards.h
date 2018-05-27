@@ -82,14 +82,16 @@ class Player {
 public:
 	// Constructor. 
 	//    Assigns initial amount of money
-	Player::Player(int m = 0) : money(m) {};
+	Player::Player(Hand hand, int m = 0) : money(m) {};
 
 	// You decide what functions you'll need...
-	int get_money() const { return money; }
-	//size_t calcpoints(Hand hand, )
+	size_t get_money() const { return money; }
+
+	void set_money(size_t m);
 
 private:
-	int money;
+	size_t money;
+	Hand hand;
 	// You decide what extra fields (if any) you'll need...
 };
 
