@@ -188,12 +188,11 @@ Hand::Hand() {
 	vector<Card> hand;
 }
 
-void Hand::add_card() { //adds a random card 
-	Card carta;
+void Hand::add_card(Card carta) { //adds a random card 
 	hand.push_back(carta);
 }
 
-void Hand::display() {
+void Hand::displayAll() {
 	for (size_t i = 0; i < hand.size(); ++i) {
 
 		cout << "\t" << hand[i].get_spanish_rank() << " de " << hand[i].get_spanish_suit();
@@ -201,7 +200,6 @@ void Hand::display() {
 
 	}
 }
-
 
 double Hand::get_points() {
 	points = 0;
@@ -217,6 +215,7 @@ double Hand::get_points() {
 	return points;
 }
 
+
 /* *************************************************
 Player class
 ************************************************* */
@@ -224,4 +223,9 @@ Player class
 
 void Player::set_money(size_t m) {
 	money = m;
+}
+
+void display(Card carta) {
+	cout << "\t" << carta.get_spanish_rank() << " de " << carta.get_spanish_suit();
+	cout << "\t" << right << "(" << carta.get_english_rank() << " of " << carta.get_english_suit() << ")." << endl;
 }
