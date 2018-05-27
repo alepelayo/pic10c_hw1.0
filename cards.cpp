@@ -203,13 +203,6 @@ void Hand::display() {
 }
 
 
-/* *************************************************
-Player class
-************************************************* */
-// Implemente the member functions of the Player class here.
-
-
-
 double Hand::get_points() {
 	points = 0;
 	for (size_t i = 0; i < hand.size(); ++i) {
@@ -222,4 +215,13 @@ double Hand::get_points() {
 		}
 	}
 	return points;
+}
+
+/* *************************************************
+Player class
+************************************************* */
+// Implemente the member functions of the Player class here.
+
+void Player::set_money(size_t m) {
+	money = m;
 }
