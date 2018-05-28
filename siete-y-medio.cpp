@@ -1,5 +1,5 @@
 #include <iostream>
-#include "card.h"
+#include "cards.h"
 #include <string>
 #include <ctime>
 #include <cstdlib>
