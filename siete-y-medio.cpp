@@ -11,7 +11,8 @@ int main() {
 
 	srand((int)time(0));
 <<<<<<< HEAD
-	int starting_balance = 100;
+	int starting_balance_player = 100;
+	int starting_balance_dealer = 100;
 =======
 	int STARTING_BALANCE = 100;
 >>>>>>> experimental
@@ -20,14 +21,15 @@ int main() {
 	Hand dealer;
 
 <<<<<<< HEAD
-	Player player1(player_uno, starting_balance);
-	Player dealer1(dealer, 900);
+	Player player1(player_uno, starting_balance_player);
+	Player dealer1(dealer, starting_balance_dealer);
 =======
 	Player player1(player_uno, STARTING_BALANCE);
 	Player dealer1(dealer, STARTING_BALANCE);
 >>>>>>> experimental
 
-	//if (player1.get_money() != 0 || player1.get_money() != 900) {
+while (dealer1.get_money() != 0 || player1.get_money() != 0) {
+
 	size_t bet;
 	char decision;
 	cout << "You have $" << player1.get_money() << ". Enter bet: ";
@@ -91,23 +93,23 @@ int main() {
 		int player_temp = player1.get_money();
 		int dealer_temp = dealer1.get_money();
 
-<<<<<<< HEAD
-		//changing money amounts for both dealer and player
-		player_temp += bet;
+		<< << << < HEAD
+			//changing money amounts for both dealer and player
+			player_temp += bet;
 		dealer_temp -= bet;
-=======
+		== == == =
 			player_uno.add_card(); //adding a new card
->>>>>>> experimental
+		>> >> >> > experimental
 
-		//setting the new money to private variable
-		player1.set_money(player_temp);
+			//setting the new money to private variable
+			player1.set_money(player_temp);
 		dealer1.set_money(dealer_temp);
 
 	}
 
 	//Player busts and Dealer wins
 	else if ((dealer.get_points() > player_uno.get_points() && dealer.get_points() <= 7.5) ||
-		(dealer.get_points() > 7.5 && player_uno.get_points() <= 7.5)) {
+		(dealer.get_points() <= 7.5 && player_uno.get_points() > 7.5)) {
 
 		cout << "The dealer has won. You lose $ " << bet << ". " << endl << endl;
 
@@ -146,6 +148,15 @@ int main() {
 	else if (dealer.get_points() == player_uno.get_points()) {
 		cout << "There has been a tie. No money will be won or lost." << endl << endl;
 	}
+
+	//setting everything to scratch (in both the hand the starting balance) before the next round is set
+	starting_balance_player = player1.get_money();
+	starting_balance_dealer = dealer1.get_money();
+	player_uno.clear();
+	dealer.clear();
+
+}
+
 
 	cin.get();
 	cin.get();
