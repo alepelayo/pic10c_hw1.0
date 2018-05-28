@@ -10,13 +10,22 @@ using namespace std;
 int main() {
 
 	srand((int)time(0));
+<<<<<<< HEAD
 	int starting_balance = 100;
+=======
+	int STARTING_BALANCE = 100;
+>>>>>>> experimental
 
 	Hand player_uno;
 	Hand dealer;
 
+<<<<<<< HEAD
 	Player player1(player_uno, starting_balance);
 	Player dealer1(dealer, 900);
+=======
+	Player player1(player_uno, STARTING_BALANCE);
+	Player dealer1(dealer, STARTING_BALANCE);
+>>>>>>> experimental
 
 	//if (player1.get_money() != 0 || player1.get_money() != 900) {
 	size_t bet;
@@ -77,9 +86,13 @@ int main() {
 		int player_temp = player1.get_money();
 		int dealer_temp = dealer1.get_money();
 
+<<<<<<< HEAD
 		//changing money amounts for both dealer and player
 		player_temp += bet;
 		dealer_temp -= bet;
+=======
+			player_uno.add_card(); //adding a new card
+>>>>>>> experimental
 
 		//setting the new money to private variable
 		player1.set_money(player_temp);
@@ -127,6 +140,42 @@ int main() {
 	else if (dealer.get_points() == player_uno.get_points()) {
 		cout << "There has been a tie. No money will be won or lost." << endl;
 	}
+
+	//size_t player::calcmoney(player, hand dealer) {
+	if (player_uno.get_points() > 7.5 && dealer.get_points() <= 7.5) {
+		cout << "you lose $ " << bet << ". " << endl;
+
+		//temporary ints for both player and dealer money
+		int player_temp = player1.get_money();
+		int dealer_temp = dealer1.get_money();
+
+		//changing money amounts for both dealer and player
+		player_temp -= bet;
+		dealer_temp += bet;
+
+		//setting the new money to private variable
+		player1.set_money(player_temp);
+		dealer1.set_money(dealer_temp);
+
+	}
+	else if (player_uno.get_points() <= 7.5 && dealer.get_points() > 7.5) {
+		cout << "you win $ " << bet << ". " << endl;
+
+		//temporary ints for both player and dealer money
+		int player_temp = player1.get_money();
+		int dealer_temp = dealer1.get_money();
+
+		//changing money amounts for both dealer and player
+		player_temp += bet;
+		dealer_temp -= bet;
+
+		//setting the new money to private variable
+		player1.set_money(player_temp);
+		dealer1.set_money(dealer_temp);
+
+	}
+	//}
+
 
 	cin.get();
 	cin.get();
