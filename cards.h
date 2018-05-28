@@ -57,13 +57,10 @@ class Hand {
 public:
 	Hand();	// A vector of Cards
 
-
-			// You decide what fields you'll need...
-			//double ranktopoints(); //gets points from another random card
-
 	void add_card(Card carta); //gets another random card
 	void displayAll(); //displays the random card specified
-	double get_points();
+	double get_points(); //Points getter
+	void clear(); //clears a player's hand before the start of a new round
 
 private:
 	vector<Card> hand;
@@ -72,22 +69,18 @@ private:
 
 
 class Player {
-public:
-	// Constructor. 
-	//    Assigns initial amount of money
-	Player::Player(Hand hand, int m = 0) : money(m) {};
+public: 
 
-	// You decide what functions you'll need...
-	size_t get_money() const { return money; }
-
-	void set_money(size_t m);
+	Player::Player(Hand hand, int m = 0) : money(m) {}; //main constructor: assigns intial amount of money
+	size_t get_money() const { return money; } //Money amount getter
+	void set_money(size_t m); //Sets the amount of money to any specified variable in order to manipulate later
 
 private:
 	size_t money;
 	Hand hand;
-	// You decide what extra fields (if any) you'll need...
 };
 
+//Non-member function which displays specified cards
 void display(Card carta);
 
 

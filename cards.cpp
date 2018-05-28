@@ -183,15 +183,16 @@ bool Card::operator < (Card card2) const {
 /* *************************************************
 Hand class
 ************************************************* */
-// Implemente the member functions of the Hand class here.
 Hand::Hand() {
 	vector<Card> hand;
 }
 
-void Hand::add_card(Card carta) { //adds a random card 
+//adds a random card to the player's hand
+void Hand::add_card(Card carta) { 
 	hand.push_back(carta);
 }
 
+//displays all current cards in player's hand (not specified)
 void Hand::displayAll() {
 	for (size_t i = 0; i < hand.size(); ++i) {
 
@@ -201,10 +202,11 @@ void Hand::displayAll() {
 	}
 }
 
+//returns the number of points after making any changes needed
 double Hand::get_points() {
 	points = 0;
+	//goes through the entire hand to make sure any ranks larger than 7 are changed to 0.5
 	for (size_t i = 0; i < hand.size(); ++i) {
-
 		if (hand[i].get_rank() > 7) {
 			points += 0.5;
 		}
@@ -215,16 +217,22 @@ double Hand::get_points() {
 	return points;
 }
 
+//clear one's hand in order to start a new round
+void Hand::clear() {
+	hand.clear();
+}
+
 
 /* *************************************************
 Player class
 ************************************************* */
-// Implemente the member functions of the Player class here.
 
+//Sets the money amount to any variable name in order to manipulate during a round
 void Player::set_money(size_t m) {
 	money = m;
 }
 
+//Non-member function which displays specified cards (rather than all based on whose hand)
 void display(Card carta) {
 	cout << "\t" << carta.get_spanish_rank() << " de " << carta.get_spanish_suit();
 	cout << "\t" << right << "(" << carta.get_english_rank() << " of " << carta.get_english_suit() << ")." << endl;
