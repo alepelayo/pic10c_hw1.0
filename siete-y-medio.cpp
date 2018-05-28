@@ -28,7 +28,7 @@ int main() {
 	Player dealer1(dealer, STARTING_BALANCE);
 >>>>>>> experimental
 
-while (dealer1.get_money() != 0 || player1.get_money() != 0) {
+while (true) {
 
 	size_t bet;
 	char decision;
@@ -148,6 +148,16 @@ while (dealer1.get_money() != 0 || player1.get_money() != 0) {
 	else if (dealer.get_points() == player_uno.get_points()) {
 		cout << "There has been a tie. No money will be won or lost." << endl << endl;
 	}
+
+	//Ending the game: either player or dealer has gotten to $0
+	if (player1.get_money() == 0) {
+		cout << "You have $0. GAME OVER!" << endl << "Come back when you have more money." << endl << endl << "Bye!";
+		break;
+	}
+
+	else if (dealer1.get_money() == 0) {
+		cout << "Dealer has $0. YOU WON!" << endl << "Come back soon." << endl << endl << "Bye!";
+		break;
 
 	//setting everything to scratch (in both the hand the starting balance) before the next round is set
 	starting_balance_player = player1.get_money();
