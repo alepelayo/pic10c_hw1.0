@@ -51,6 +51,7 @@ int main() {
 		Card carta;
 		cout << "New card:" << endl;
 		display(carta);
+		cout << endl;
 
 		cout << "Your cards:" << endl;
 		player_uno.add_card(carta);
@@ -70,17 +71,21 @@ int main() {
 		cout << "New Card:" << endl;
 		Card carta3;
 		dealer.add_card(carta3);
+		display(carta3);
+		cout << endl;
+		cout << "Dealer Cards: " << endl;
 		dealer.displayAll();
+		cout << "Dealer's total is " << dealer.get_points() << "." << endl;
 	}
 
-	cout << "The dealer's total is " << dealer.get_points() << endl;
+	cout << "The dealer's total is " << dealer.get_points() << endl << endl;
 
 
 	//Player wins and Dealer busts
 	if ((player_uno.get_points() > dealer.get_points() && player_uno.get_points() <= 7.5) ||
 		(dealer.get_points() > 7.5 && player_uno.get_points() <= 7.5)) {
 
-		cout << "you win $ " << bet << ". " << endl;
+		cout << "The dealer has lost. You win $ " << bet << ". " << endl << endl;
 
 		//temporary ints for both player and dealer money
 		int player_temp = player1.get_money();
@@ -104,7 +109,7 @@ int main() {
 	else if ((dealer.get_points() > player_uno.get_points() && dealer.get_points() <= 7.5) ||
 		(dealer.get_points() > 7.5 && player_uno.get_points() <= 7.5)) {
 
-		cout << "you lose $ " << bet << ". " << endl;
+		cout << "The dealer has won. You lose $ " << bet << ". " << endl << endl;
 
 		//temporary ints for both player and dealer money
 		int player_temp = player1.get_money();
@@ -122,7 +127,7 @@ int main() {
 
 	//Both Player and Dealer Bust
 	else if (player_uno.get_points() > 7.5 && dealer.get_points() > 7.5) {
-		cout << "you lose $ " << bet << ". " << endl;
+		cout << "Both you and the dealer have bust. You both lose $ " << bet << ". " << endl << endl;
 
 		//temporary ints for both player and dealer money
 		int player_temp = player1.get_money();
@@ -137,45 +142,10 @@ int main() {
 		dealer1.set_money(dealer_temp);
 	}
 
+	//Player and Dealer have the same number of points
 	else if (dealer.get_points() == player_uno.get_points()) {
-		cout << "There has been a tie. No money will be won or lost." << endl;
+		cout << "There has been a tie. No money will be won or lost." << endl << endl;
 	}
-
-	//size_t player::calcmoney(player, hand dealer) {
-	if (player_uno.get_points() > 7.5 && dealer.get_points() <= 7.5) {
-		cout << "you lose $ " << bet << ". " << endl;
-
-		//temporary ints for both player and dealer money
-		int player_temp = player1.get_money();
-		int dealer_temp = dealer1.get_money();
-
-		//changing money amounts for both dealer and player
-		player_temp -= bet;
-		dealer_temp += bet;
-
-		//setting the new money to private variable
-		player1.set_money(player_temp);
-		dealer1.set_money(dealer_temp);
-
-	}
-	else if (player_uno.get_points() <= 7.5 && dealer.get_points() > 7.5) {
-		cout << "you win $ " << bet << ". " << endl;
-
-		//temporary ints for both player and dealer money
-		int player_temp = player1.get_money();
-		int dealer_temp = dealer1.get_money();
-
-		//changing money amounts for both dealer and player
-		player_temp += bet;
-		dealer_temp -= bet;
-
-		//setting the new money to private variable
-		player1.set_money(player_temp);
-		dealer1.set_money(dealer_temp);
-
-	}
-	//}
-
 
 	cin.get();
 	cin.get();
