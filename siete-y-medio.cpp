@@ -107,10 +107,9 @@ int main() {
 
 		}
 
-		gamelog << "Dealer's total: " << dealer.get_points() << endl << endl;
-
 		cout << "The dealer's total is " << dealer.get_points() << "." << endl << endl; //still trying to figure out how to only show one dealer total
 
+		gamelog << "Dealer's total: " << dealer.get_points() << endl << endl;
 																						//Player wins and Dealer busts
 		if ((player_uno.get_points() > dealer.get_points() && player_uno.get_points() <= 7.5) ||
 			(dealer.get_points() > 7.5 && player_uno.get_points() <= 7.5)) {
