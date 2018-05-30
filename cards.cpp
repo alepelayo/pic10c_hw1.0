@@ -164,8 +164,6 @@ string Card::get_english_rank() const {
 	return rankName;;
 }
 
-
-
 // Assigns a numerical value to card based on rank.
 // AS=1, DOS=2, ..., SIETE=7, SOTA=10, CABALLO=11, REY=12
 int Card::get_rank() const {
@@ -177,8 +175,6 @@ int Card::get_rank() const {
 bool Card::operator < (Card card2) const {
 	return rank < card2.rank;
 }
-
-
 
 /* *************************************************
 Hand class

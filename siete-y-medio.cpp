@@ -82,7 +82,10 @@ int main() {
 		dealer.add_card(carta2);
 		display(carta2);
 
-
+		if (dealer.get_points() >= 6) {
+			cout << "The dealer's total is " << dealer.get_points() << "." << endl << endl; 
+			//still trying to figure out how to only show one dealer total
+		}
 
 		gamelog << "Dealer's cards: \n";
 		gamelog << "\t" << "\t" << carta2.get_spanish_rank() + " de " + carta2.get_spanish_suit() +
@@ -106,8 +109,6 @@ int main() {
 			cout << "The dealer's total is " << dealer.get_points() << "." << endl << endl;
 
 		}
-
-		cout << "The dealer's total is " << dealer.get_points() << "." << endl << endl; //still trying to figure out how to only show one dealer total
 
 		gamelog << "Dealer's total: " << dealer.get_points() << endl << endl;
 																						//Player wins and Dealer busts
