@@ -8,8 +8,6 @@
 
 using namespace std;
 
-//just want to check if it notices any changes with this comment
-
 int main() {
 
 	//creating a gamelog.txt which keeps track of each round, including betting value and hands for both dealer and input user
