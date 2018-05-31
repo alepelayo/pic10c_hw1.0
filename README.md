@@ -43,22 +43,15 @@ to add more cards to their hand.
 
 Once the dealer reaches a specific number of points, all their cards and points will be displayed 
 similarly to the player's. The player's and dealer's points are then compared to determine the 
-winners of that specific round. 
+winners of that specific round. Money amount for both the player and dealer are updated and a new
+round begins automatically.
+
+## gamelog.txt file
+
+At the end of every round, the gamelog.txt file records both the player's and dealer's hands and final
+points in addition to the initial bet amount and round number.  
 
 
-
-
-
-
-
-
-
-Websites to help format .md files:
-
-- https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#tables
-- https://help.github.com/articles/basic-writing-and-formatting-syntax/#lists
-
-
-Actual assignment description: 
+Original assignment description: 
 
 - http://pic.ucla.edu/~rsalazar/pic10c/assignments/hw1/index.html
