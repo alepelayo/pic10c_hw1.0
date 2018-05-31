@@ -29,8 +29,7 @@ Baraja'* being used only goes up to 7 before jumping to 10, or the **sota**,
 | Name:   | As | Dos | Tres | Cuatro | Cinco | Seis | Siete | Sota | Caballo | Rey |
 |--- | ---| ---|--- |---| ---| ---| ---| ---| ---| ---|
 |Rank: | 1 | 2 | 3 | 4 | 5| 6| 7| 10 | 11 | 12 |
-|---| ---| ---| ---| ---| ---| ---| ---| ---| ---| ---|
-|Point value:| 1 | 2 | 3 | 4 | 5| 6| 7| \frac{1}{2} | \frac{1}{2} | \frac{1}{2} |
+|Point value:| 1 | 2 | 3 | 4 | 5| 6| 7| 1/2 | 1/2 | 1/2 |
 
 Each game begins with a simply question of how much the player wishes to bet.
 Once the player inputs a sufficient bet amount, their first card is drawn as
