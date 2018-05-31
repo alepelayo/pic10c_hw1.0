@@ -7,18 +7,18 @@ This is a rendition of the class card game "siete y medio"
 
 Winning a round (winning intial bet amount):
 
-	- The player comes closer to 7 \frac{1}{2} than the dealer
-	- The player is below 7 \frac{1}{2} and the dealer busts
+- The player comes closer to 7 1/2 than the dealer
+- The player is below 7 1/2 and the dealer busts
 
 Losing a round (losing intial bet amount):
 	
-	-The dealer comes closer to 7 \frac{1}{2} than the player
-	- The dealer is below 7 \frac{1}{2} and the player busts
-	- Both the dealer and player bust: this is known as the *house advantage*
+-The dealer comes closer to 7 1/2 than the player
+- The dealer is below 7 1/2 and the player busts
+- Both the dealer and player bust: this is known as the *house advantage*
 
 Ending in a tie (initial bet is neither won nor lost):
 
-	- Both the dealer and player have the same total and do not bust
+- Both the dealer and player have the same total and do not bust
 
 ### Game Mechanics:
 
