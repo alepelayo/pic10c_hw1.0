@@ -1,4 +1,4 @@
-## Assignment 1: "_Siete y Medio_" Card Game
+# Assignment 1: "_Siete y Medio_" Card Game
 
 This is a rendition of the class card game "siete y medio" 
 (seven and a half) in which the player is playing against the dealer.
