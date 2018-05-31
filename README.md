@@ -12,7 +12,7 @@ Winning a round (winning intial bet amount):
 
 Losing a round (losing intial bet amount):
 	
--The dealer comes closer to 7 1/2 than the player
+- The dealer comes closer to 7 1/2 than the player
 - The dealer is below 7 1/2 and the player busts
 - Both the dealer and player bust: this is known as the *house advantage*
 
@@ -35,6 +35,17 @@ Each game begins with a simply question of how much the player wishes to bet.
 Once the player inputs a sufficient bet amount, their first card is drawn as
 well as the number of points they currently have with their initial card.
 
+Player's points are updated whenever they wish to add another card to their hand. 
+Once they no longer wish to add cards to their hand, the game automatically shifts 
+to the dealer's turn. The same process is repeated with the dealer's hand, except it 
+is done almost instantly, since the dealer can automatically answer whether they wish 
+to add more cards to their hand. 
+
+Once the dealer reaches a specific number of points, all their cards and points will be displayed 
+similarly to the player's. The player's and dealer's points are then compared to determine the 
+winners of that specific round. 
+
+
 
 
 
@@ -51,6 +62,3 @@ Websites to help format .md files:
 Actual assignment description: 
 
 - http://pic.ucla.edu/~rsalazar/pic10c/assignments/hw1/index.html
-
-
-> An iterator is any object that, pointing to some element in a range 
