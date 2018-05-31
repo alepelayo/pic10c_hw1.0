@@ -1,9 +1,9 @@
-##Assignment 1: "_Siete y Medio_" Card Game
+## Assignment 1: "_Siete y Medio_" Card Game
 
 This is a rendition of the class card game "siete y medio" 
 (seven and a half) in which the player is playing against the dealer.
 
-###Possible Outcomes when playing include:
+### Possible Outcomes when playing include:
 
 Winning a round (winning intial bet amount):
 
@@ -20,7 +20,7 @@ Ending in a tie (initial bet is neither won nor lost):
 
 	- Both the dealer and player have the same total and do not bust
 
-###Game Mechanics:
+### Game Mechanics:
 
 Unlike the more common game of Blackjack (also known as 21), the *'Spanish
 Baraja'* being used only goes up to 7 before jumping to 10, or the **sota**,
