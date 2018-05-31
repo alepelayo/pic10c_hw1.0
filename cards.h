@@ -63,8 +63,8 @@ public:
 	void clear(); //clears a player's hand before the start of a new round
 
 private:
-	vector<Card> hand;
-	double points;
+	vector<Card> hand; //empty Card vector
+	double points; //point count which determines who wins the specific round
 };
 
 
@@ -76,8 +76,8 @@ public:
 	void set_money(size_t m); //Sets the amount of money to any specified variable in order to manipulate later
 
 private:
-	size_t money;
-	Hand hand;
+	size_t money; //keeps track of each player's money
+	Hand hand; //allows the player class to use the empty vector of cards
 };
 
 //Non-member function which displays specified cards
